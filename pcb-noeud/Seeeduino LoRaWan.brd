@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -173,6 +173,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="no" active="no"/>
 </layers>
 <board>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyOWE3NWEy" projecturn="a.cGVyc29uYWw6dWUyOWE3NWEyIzIwMTUwNjI1MTQwMTg0MzE" f3durn="urn:adsk.wipprod:dm.lineage:mxmJGioOTrCV8BumaUHFwg" pcbguid="cdbe6112-0e97-4e38-80e3-706cc3e83e13" lastpulledtime="" lastsyncedchangeguid="883bd00f-16fe-26c9-6d9b-bcba92bcc3f5"/>
 <plain>
 <wire x1="68.58" y1="52.07" x2="67.31" y2="53.34" width="0.0254" layer="20" curve="90"/>
 <wire x1="2.54" y1="51.816" x2="4.064" y2="53.34" width="0.0254" layer="20"/>
@@ -1198,7 +1199,7 @@ design rules under a new name.
 <attribute name="VALUE" x="3.048" y="48.895" size="0.889" layer="28" ratio="11" rot="MR180"/>
 </element>
 <element name="ANT3" library="Connector" package="1P-65/35MIL" value="321050326/16cm Wire Antenna" x="3.556" y="42.418" smashed="yes">
-<attribute name="NAME" x="5.207" y="41.148" size="0.8128" layer="25"/>
+<attribute name="NAME" x="4.445" y="40.894" size="0.8128" layer="25"/>
 </element>
 <element name="R1" library="Discrete" package="R0603" value="1k" x="21.12433125" y="43.053" smashed="yes" rot="MR270">
 <attribute name="NAME" x="20.36233125" y="44.45" size="0.635" layer="26" ratio="10" rot="MR270"/>
@@ -1249,7 +1250,7 @@ design rules under a new name.
 <attribute name="NAME" x="61.087" y="14.986" size="0.635" layer="34" ratio="10" rot="MR0"/>
 <attribute name="VALUE" x="61.087" y="15.0495" size="0.381" layer="28" ratio="12" rot="MR0"/>
 </element>
-<element name="C3" library="Discrete" package="C0603" value="4.7F" x="59.817" y="18.034" smashed="yes" rot="MR180">
+<element name="C3" library="Discrete" package="C0603" value="4.7uF" x="59.817" y="18.034" smashed="yes" rot="MR180">
 <attribute name="NAME" x="58.42" y="17.272" size="0.889" layer="26" ratio="11" rot="MR180"/>
 <attribute name="NAME" x="58.547" y="18.288" size="0.635" layer="34" ratio="10" rot="MR180"/>
 <attribute name="VALUE" x="58.547" y="18.2245" size="0.381" layer="28" ratio="12" rot="MR180"/>
@@ -1991,7 +1992,28 @@ design rules under a new name.
 <wire x1="38.354" y1="47.1805" x2="37.6335" y2="46.46" width="0.1524" layer="16"/>
 <wire x1="37.6335" y1="46.46" x2="36.449" y2="46.46" width="0.1524" layer="16"/>
 <wire x1="35.262" y1="45.273" x2="31.1175" y2="45.273" width="0.1524" layer="16"/>
+<contactref element="U2" pad="3"/>
+<contactref element="C1" pad="1"/>
+<wire x1="30.734" y1="33.147" x2="30.653" y2="33.228" width="0.1524" layer="16"/>
+<wire x1="30.653" y1="33.228" x2="27.394" y2="33.228" width="0.1524" layer="16"/>
 <wire x1="31.1175" y1="45.273" x2="30.861" y2="45.5295" width="0.1524" layer="16"/>
+<wire x1="30.861" y1="45.5295" x2="31.496" y2="46.1645" width="0.1524" layer="16"/>
+<wire x1="31.496" y1="46.1645" x2="31.496" y2="46.482" width="0.1524" layer="16"/>
+<via x="31.496" y="46.482" extent="1-16" drill="0.2032" diameter="0.2032"/>
+<wire x1="31.496" y1="46.482" x2="27.559" y2="46.482" width="0.1524" layer="1"/>
+<wire x1="27.559" y1="46.482" x2="26.0604" y2="44.9834" width="0.1524" layer="1"/>
+<wire x1="25.9936625" y1="44.9834" x2="25.7556" y2="44.7453375" width="0.1524" layer="1"/>
+<wire x1="25.7556" y1="44.7453375" x2="25.7556" y2="44.704" width="0.1524" layer="1"/>
+<wire x1="26.0604" y1="44.9834" x2="25.9936625" y2="44.9834" width="0.1524" layer="1"/>
+<wire x1="19.558" y1="44.704" x2="18.796" y2="43.942" width="0.1524" layer="1"/>
+<via x="18.796" y="43.942" extent="1-16" drill="0.2032" diameter="0.2032"/>
+<wire x1="18.796" y1="43.942" x2="18.796" y2="40.132" width="0.1524" layer="16"/>
+<via x="18.796" y="40.132" extent="1-16" drill="0.2032" diameter="0.2032"/>
+<wire x1="18.796" y1="40.132" x2="24.13" y2="34.798" width="0.1524" layer="1"/>
+<via x="24.13" y="34.798" extent="1-16" drill="0.2032" diameter="0.2032"/>
+<wire x1="24.13" y1="34.798" x2="25.7" y2="33.228" width="0.1524" layer="16"/>
+<wire x1="25.7" y1="33.228" x2="27.394" y2="33.228" width="0.1524" layer="16"/>
+<wire x1="25.7556" y1="44.704" x2="19.558" y2="44.704" width="0.1524" layer="1"/>
 </signal>
 <signal name="VIN">
 <contactref element="C26" pad="2"/>
@@ -2270,12 +2292,6 @@ design rules under a new name.
 <wire x1="50.292" y1="43.688" x2="50.264" y2="43.66" width="0.1524" layer="16"/>
 <wire x1="50.264" y1="43.66" x2="49.297" y2="43.66" width="0.1524" layer="16"/>
 </signal>
-<signal name="N$9">
-<contactref element="U2" pad="3"/>
-<contactref element="C1" pad="1"/>
-<wire x1="30.734" y1="33.147" x2="30.653" y2="33.228" width="0.1524" layer="16"/>
-<wire x1="30.653" y1="33.228" x2="27.394" y2="33.228" width="0.1524" layer="16"/>
-</signal>
 <signal name="N$11">
 <contactref element="ANT1" pad="D"/>
 <contactref element="ANT3" pad="1"/>
@@ -2363,4 +2379,11 @@ design rules under a new name.
 </errors>
 </board>
 </drawing>
+<compatibility>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports Fusion synchronisation.
+This feature will not be available in this version and saving
+the document will break the link to the Fusion PCB feature.
+</note>
+</compatibility>
 </eagle>

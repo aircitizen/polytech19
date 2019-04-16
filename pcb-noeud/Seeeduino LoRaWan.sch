@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5255,7 +5255,7 @@ type 0309, grid 2.5 mm</description>
 <part name="C2" library="Discrete" deviceset="C*" device="-0603" value="4.7uF"/>
 <part name="GND19" library="Power or GND " deviceset="GND_POWER" device=""/>
 <part name="GND20" library="Power or GND " deviceset="GND_POWER" device=""/>
-<part name="C3" library="Discrete" deviceset="C*" device="-0603" value="4.7F"/>
+<part name="C3" library="Discrete" deviceset="C*" device="-0603" value="4.7uF"/>
 <part name="GND12" library="Power or GND " deviceset="GND_POWER" device=""/>
 </parts>
 <sheets>
@@ -6320,7 +6320,13 @@ type 0309, grid 2.5 mm</description>
 <junction x="312.42" y="166.37"/>
 </segment>
 <segment>
-<label x="353.06" y="297.18" size="0.889" layer="95" ratio="12" rot="MR180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="VCC"/>
+<wire x1="342.9" y1="297.18" x2="347.98" y2="297.18" width="0.1524" layer="91"/>
+<pinref part="C1" gate="C" pin="1"/>
+<wire x1="347.98" y1="297.18" x2="347.98" y2="299.72" width="0.1524" layer="91"/>
+<wire x1="347.98" y1="297.18" x2="353.06" y2="297.18" width="0.1524" layer="91"/>
+<junction x="347.98" y="297.18"/>
+<label x="353.06" y="297.18" size="0.889" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -6496,16 +6502,6 @@ type 0309, grid 2.5 mm</description>
 <pinref part="R4" gate="R" pin="1"/>
 <wire x1="294.64" y1="289.56" x2="292.1" y2="289.56" width="0.1524" layer="91"/>
 <label x="292.1" y="289.56" size="0.889" layer="95" ratio="12" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="VCC"/>
-<wire x1="342.9" y1="297.18" x2="347.98" y2="297.18" width="0.1524" layer="91"/>
-<pinref part="C1" gate="C" pin="1"/>
-<wire x1="347.98" y1="297.18" x2="347.98" y2="299.72" width="0.1524" layer="91"/>
-<junction x="347.98" y="297.18"/>
-<wire x1="353.06" y1="297.18" x2="347.98" y2="297.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
