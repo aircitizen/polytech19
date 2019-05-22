@@ -20,7 +20,7 @@ int Get_Temperature(){
   float t = sht31.readTemperature();
   if (! isnan(t)) {  // check if 'is not a number'
     return int(t);
-  } else { 
+  } else {
     return -1;
   }
  }
@@ -29,7 +29,7 @@ int Get_Humidity(){
   float h = sht31.readHumidity();
   if (! isnan(h)) {  // check if 'is not a number'
     return int(h);
-  } else { 
+  } else {
     return -1;
   }
  }
@@ -59,7 +59,7 @@ void Test_Commands(void){
      {
         SerialUSB.write(Serial1.read());
      }
- } 
+ }
 
 void Measure(){
   str=String(Get_Temperature())+" "+String(Get_Humidity())+ " "+ Get_PM();
@@ -83,7 +83,7 @@ void Envoyer(){
 
      sds.begin();
 
-    SerialUSB.println("Start");  
+    SerialUSB.println("Start");
 
   if (! sht31.begin(0x44)) {   // Set to 0x45 for alternate i2c addr
     SerialUSB.println("Couldn't start");
@@ -102,13 +102,13 @@ void Envoyer(){
   Serial1.println("at+mode=lwabp");
   delay(5000);    //delay 5s
   Test_Commands();
-  
+
   while(1){
     Measure(); //delay 20s
     Envoyer(); //delay 10s
     Test_Commands();
     delay(60000);
-    SerialUSB.println("--------------------------------------");  
+    SerialUSB.println("--------------------------------------");
     // Serial1.println("AT+CMSGHEX=\"22.5\"");
     //  Test_Commands();
   }
