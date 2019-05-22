@@ -12,8 +12,8 @@
 EnergySaving nrgSave;
 RTCInt rtc;
 
-int rxPin = 0;
-int txPin = 1;
+int rxPin = 7;
+int txPin = 8;
 int delay_temp= 10000;
 SdsDustSensor sds(rxPin, txPin);
 String str_pm="-1 -1";
